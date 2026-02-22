@@ -25,11 +25,13 @@ def get_title(soup):
 def get_body(soup):
   if soup.body:
     text=soup.body.get_text()
-    return tet
+    return text
+  else:
+    return " "
 
 def get_links(soup):
-  link_list={]
-  tags=soup.find_all("a)
+  link_list=[]
+  tags=soup.find_all("a")
 
   for t in tags:
     h=t.get("href")
@@ -39,11 +41,11 @@ def get_links(soup):
 
 
 def main():
-  if len(system.argv)<2;
+  if len(system.argv)<2:
     print("pass URL on commond line")
     system.exit()
   url=system.argv[1]
-  html=getch_page(url)
+  html=fetch_page(url)
   soup=BeautifulSoup(html,"html.parser")
 
   title=get_title(soup)
