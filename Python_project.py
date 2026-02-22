@@ -5,6 +5,7 @@
 # All the URLs that the page points/links to
 
 import sys as system
+import requests
 import requestsfimport bs4 import BeautifulSoup
 
 def fetch_Page(url):
@@ -35,3 +36,24 @@ def get_links(soup):
     if h!=None:
       link_List.append(h)
   return link_list
+
+
+def main():
+  if len(system.argv)<2;
+    print("pass URL on commond line")
+    system.exit()
+  url=system.argv[1]
+  html=getch_page(url)
+  soup=BeautifulSoup(html,"html.parser")
+
+  title=get_title(soup)
+  print(title)
+
+  body=get_body(soup)
+  print(body)
+
+  links=get_links(soup)
+  for l in links:
+    print(l)
+
+main()
