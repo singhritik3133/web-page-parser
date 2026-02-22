@@ -14,3 +14,24 @@ def fetch_Page(url):
     system.exit()
 
   return r.text
+
+def get_title(soup):
+  if soup.title:
+    return soup.title.text.strip()
+  else:
+    return "Don't get Title"
+
+def get_body(soup):
+  if soup.body:
+    text=soup.body.get_text()
+    return tet
+
+def get_links(soup):
+  link_list={]
+  tags=soup.find_all("a)
+
+  for t in tags:
+    h=t.get("href")
+    if h!=None:
+      link_List.append(h)
+  return link_list
