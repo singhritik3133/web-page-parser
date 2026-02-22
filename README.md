@@ -14,3 +14,20 @@ fetches the webpage, and prints:
 - BeautifulSoup (bs4)
 
 
+
+# Python Project_2 - File System Scanner
+
+##  Description
+This Python program builds a list of all files present in a given directory
+(or the entire system if specified).
+
+It traverses directories recursively and stores full file paths.
+
+##  Technologies Used
+- Python 3
+- os module
+
+
+
+
+
