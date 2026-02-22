@@ -12,7 +12,7 @@ def fetch_page(url):
     r = requests.get(url)
 
     if r.status_code != 200:
-        print("Page nahi khula")
+        print("Page Not Fetched")
         sys.exit()
 
     return r.text
@@ -22,7 +22,7 @@ def get_title(soup):
     if soup.title:
         return soup.title.text.strip()
     else:
-        return "No title milaa"
+        return "Title not get"
 
 
 def get_body(soup):
@@ -49,7 +49,7 @@ def get_links(soup):
 def main():
 
     if len(sys.argv) < 2:
-        print("URL pass karo command line me")
+        print("Please pass commond input")
         sys.exit()
 
     url = sys.argv[1]
@@ -71,3 +71,4 @@ def main():
 
 
 main()
+
