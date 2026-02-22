@@ -10,5 +10,7 @@ for root, folders, files in os.walk(path):
     for name in files:
         full_name = root + "/" + name
         file_list.append(full_name)
+for f in all_files:
+    print(f)
 
 print("Total number of files are:", len(file_list))
